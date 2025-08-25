@@ -1,0 +1,22 @@
+python -u run.py --num-trials 1 --env airline --model qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200 --model-provider openai --user-model gpt-4o --user-model-provider openai --agent-strategy tool-calling --temperature 0.1 --log-dir /mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/outputs/taubench//qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200/20250822_084136/airline/ --max-concurrency 4
+Starting process  to eval model qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200 of domain airline
+Namespace(num_trials=1, env='airline', model='qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200', model_provider='openai', user_model='gpt-4o', user_model_provider='openai', agent_strategy='tool-calling', temperature=0.1, task_split='test', start_index=0, end_index=-1, task_ids=None, log_dir='/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/outputs/taubench//qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200/20250822_084136/airline/', max_concurrency=4, seed=10, shuffle=0, user_strategy='llm', few_shot_displays_path=None)
+Loading user with strategy: llm
+Traceback (most recent call last):
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/run.py", line 102, in <module>
+    main()
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/run.py", line 98, in main
+    run(config)
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/run.py", line 35, in run
+    env = get_env(
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/__init__.py", line 29, in get_env
+    return MockAirlineDomainEnv(
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/airline/env.py", line 26, in __init__
+    super().__init__(
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/base.py", line 73, in __init__
+    self.user = load_user(
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/user.py", line 340, in load_user
+    return LLMUserSimulationEnv(model=model, provider=provider)
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/user.py", line 46, in __init__
+    model_cfg = MODEL_CFG_MAP[model]
+KeyError: 'gpt-4o'

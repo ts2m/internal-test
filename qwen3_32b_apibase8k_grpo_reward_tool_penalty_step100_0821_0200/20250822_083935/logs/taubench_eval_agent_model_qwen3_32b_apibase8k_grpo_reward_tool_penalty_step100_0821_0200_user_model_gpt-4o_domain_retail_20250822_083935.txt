@@ -1,0 +1,14 @@
+python -u run.py --num-trials 1 --env retail --model qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200 --model-provider openai --user-model gpt-4o --user-model-provider openai --agent-strategy tool-calling --temperature 0.1 --log-dir /mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/outputs/taubench//qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200/20250822_083935/retail/ --max-concurrency 4
+Starting process 13241 to eval model qwen3_32b_apibase8k_grpo_reward_tool_penalty_step100_0821_0200 of domain retail
+Traceback (most recent call last):
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/run.py", line 4, in <module>
+    from tau_bench.types import RunConfig
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/__init__.py", line 3, in <module>
+    from tau_bench.envs.base import Env as Env
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/__init__.py", line 4, in <module>
+    from tau_bench.envs.base import Env
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/base.py", line 8, in <module>
+    from tau_bench.envs.user import load_user, UserStrategy
+  File "/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/envs/user.py", line 9, in <module>
+    from tau_bench.model_config import MODEL_CONFIG_MAP
+ImportError: cannot import name 'MODEL_CONFIG_MAP' from 'tau_bench.model_config' (/mnt/cfs_bj_mt/liulinyun/work2025/00/internal_repos/baidu/personal-code/tool-use-bench/tau-bench/tau_bench/model_config.py)
